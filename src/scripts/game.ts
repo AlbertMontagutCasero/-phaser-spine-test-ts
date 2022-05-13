@@ -1,9 +1,10 @@
 import 'phaser'
 import MainScene from './scenes/mainScene'
 import PreloadScene from './scenes/preloadScene'
+import 'phaser/plugins/spine/dist/SpinePlugin'
 
-const DEFAULT_WIDTH = 1280
-const DEFAULT_HEIGHT = 720
+const DEFAULT_WIDTH = 1680
+const DEFAULT_HEIGHT = 1050
 
 const config = {
   type: Phaser.AUTO,
@@ -22,6 +23,15 @@ const config = {
       debug: false,
       gravity: { y: 400 }
     }
+  },
+  plugins: {
+    scene: [
+      {
+        key: SpinePlugin.name,
+        plugin: SpinePlugin,
+        mapping: 'spine'
+      }
+    ]
   }
 }
 

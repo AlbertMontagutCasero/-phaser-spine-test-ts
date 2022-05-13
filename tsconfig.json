@@ -1,22 +1,38 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "ES2015",
-
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-
-    "allowJs": true,
-    "allowUnreachableCode": false,
-    "noImplicitAny": false,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "strictPropertyInitialization": false,
-
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
     "moduleResolution": "node",
-    "lib": ["dom", "esnext"]
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom",
+      "scripthost"
+    ],
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "typeRoots": [
+		"@types",
+		"node_modules/@types",
+		"node_module/phaser/types"
+  ],
+  "include": ["src/**/*", "./@types/*.ts", "node_modules/phaser/types/"],
 }
+
+// {
+//   "compilerOptions": {
+//     "skipLibCheck": true,
+//   },
+//   "include": ["src/**/*", "./@types/*.ts", "node_modules/phaser/types/"],
+// }
