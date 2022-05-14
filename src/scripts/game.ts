@@ -1,7 +1,7 @@
 import 'phaser'
+import 'phaser/plugins/spine/dist/SpinePlugin'
 import MainScene from './scenes/mainScene'
 import PreloadScene from './scenes/preloadScene'
-import 'phaser/plugins/spine/dist/SpinePlugin'
 
 const DEFAULT_WIDTH = 1680
 const DEFAULT_HEIGHT = 1050
