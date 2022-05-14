@@ -1,6 +1,7 @@
 import PhaserLogo from '../objects/phaserLogo'
 import FpsText from '../objects/fpsText'
 import { SpineChild } from '../objects/spineChild'
+import { SpineComposite } from '../objects/spineComposition'
 
 export default class MainScene extends Phaser.Scene {
   fpsText!: FpsText
@@ -21,12 +22,8 @@ export default class MainScene extends Phaser.Scene {
       })
       .setOrigin(1, 0)
 
-      const spineChildInstance = new SpineChild(this);
-
-      const gameSize = this.scale.gameSize;
-      const yCenterScreen = gameSize.height / 2;
-      const xCenterScreen = gameSize.width / 2;
-      this.add.spine(xCenterScreen, yCenterScreen + 200, 'owl-spine', "blink", true)
+      const spineChildInstance = new SpineChild(this)
+      const spineComposite = new SpineComposite(this)
   }
 
   update() {
